@@ -1,0 +1,30 @@
+* Specs
+** OS
+ - Nickname: Trixie
+ - Simple Name: Debian GNU/Linux
+ - Architecture: x86_64
+ - Full Name: Debian GNU/Linux 13 (trixie) x86_64 
+**  Host
+ - Simple Name: 
+ - Product Code: 
+ - Full Name: 
+** Display
+ - Simple Name:
+ - Width: 
+ - Height: 
+ - Refresh Rate: 
+** CPU
+ - Brand: Intel(R) Core(TM)
+ - Modifier: i5 
+ - GenerationSKU: 6600K 
+** GPU
+ - Brand: NVIDIA GeForce
+ - ID: GTX 980 Ti
+ - Full Name: 
+** Memory
+ - Total: 15.59 GiB
+ - Est. Baseline: 1.61 GiB 
+** Disk
+ - Total: 91.11 GiB
+ - Use: 9.85 GiB
+
