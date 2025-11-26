@@ -1,0 +1,29 @@
+* Specs
+** OS
+ - Simple Name: 
+ - Architecture: 
+ - Full Name: 
+**  Host
+ - Simple Name: 
+ - Product Code: 
+ - Full Name: 
+** Display
+ - Simple Name:
+ - Width: 
+ - Height: 
+ - Refresh Rate: 
+** CPU
+ - Brand: 
+ - Modifier: 
+ - GenerationSKU: 
+** GPU
+ - Brand: 
+ - ID: 
+ - Full Name: 
+** Memory
+ - Total: 
+ - Est. Baseline: 
+** Disk
+ - Total: 
+ - Use: 
+
