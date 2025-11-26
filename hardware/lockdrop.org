@@ -1,0 +1,29 @@
+* Specs
+** OS
+ - Simple Name: Arch Linux
+ - Architecture: x86_64
+ - Full Name: Arch Linux x86_64-arch1-1JU0Akg4/#Rh3a94DWC0K0qKif
+**  Host
+ - Simple Name: ThinkCentre M710t
+ - Product Code: 10M9000RUS
+ - Full Name: 10M9000RUS (ThinkCentre M710t)
+** Display
+ - Simple Name:
+ - Width: 1024
+ - Height: 768
+ - Refresh Rate: 3.50 GHz
+** CPU
+ - Brand: Intel(R) Core(TM)
+ - Modifier: i5
+ - GenerationSKU: 7400
+** GPU
+ - Brand: Intel HD Graphics
+ - ID: 630
+ - Full Name: Intel HD Graphics 630
+** Memory
+ - Total: 15.52GB
+ - Est. Baseline: 2.10GB
+** Disk
+ - Total: 924.98GB
+ - Use: 64.16GB
+
