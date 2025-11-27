@@ -9,5 +9,16 @@ apt install -y \
 #Primary Service
 suricata \
 
-#"Fat" Options for troubleshooting
+
+#Supplemental Software
+gettext-base \  #For using envsubst so that environment variables can be referenced in config files.
+
+#"Fat" Options for troubleshooting, may be removed later
 emacs
+
+#End Software Install
+
+#File Copying
+
+#Service Specific
+COPY ./suricata.yaml /etc/suricata/suricata.yaml
