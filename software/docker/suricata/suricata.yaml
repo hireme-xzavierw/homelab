@@ -15,13 +15,13 @@ suricata-version: "7.0"
 vars:
   # more specific is better for alert accuracy and performance
   address-groups:
-    BICK_NET: "[192.168.0.0/24,10.8.0.0/24]"
-    SIS_NET: "[192.168.1.0/24]"
-    #HOME_NET: "[10.0.0.0/8]"
+    SPAWN: "[${SPAWN_NETWORK_ADDRESS}]"
+    SISTER: "[${SISTER_NETWORK_ADDRESS}]"
+    VPN: "[${VPN_NETWORK_ADDRESS}]"
     #HOME_NET: "[172.16.0.0/12]"
     #HOME_NET: "any"
 
-    EXTERNAL_NET: "!$HOME_NET"
+    EXTERNAL_NET: "[!$SPAWN,!$SISTER,!$VPN]"
     #EXTERNAL_NET: "any"
 
     HTTP_SERVERS: "$HOME_NET"
