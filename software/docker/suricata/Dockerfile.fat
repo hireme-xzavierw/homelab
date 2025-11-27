@@ -1,4 +1,13 @@
 FROM debian:trixie
 
-#Install Suricata
-RUN apt update && apt install -y suricata
+#Update trixie
+RUN apt update && \
+
+#Begin Software Install
+apt install -y \
+
+#Primary Service
+suricata \
+
+#"Fat" Options for troubleshooting
+emacs
