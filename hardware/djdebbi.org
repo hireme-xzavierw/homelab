@@ -28,3 +28,9 @@
  - Total: 91.11 GiB
  - Use: 9.85 GiB
 
+* Software
+
+** Docker
+** OpenVpn
+** Samba
+** NFS
