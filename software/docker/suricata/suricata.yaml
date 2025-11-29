@@ -16,7 +16,7 @@ vars:
   # more specific is better for alert accuracy and performance
   address-groups:
     SPAWN: "[${SPAWN_NETWORK_ADDRESS}]"
-    SISTER: "[${SISTER_NETWORK_ADDRESS}]"
+    SISTER: "[$SISTER_NETWORK_ADDRESS]"
     VPN: "[${VPN_NETWORK_ADDRESS}]"
     #HOME_NET: "[172.16.0.0/12]"
     #HOME_NET: "any"

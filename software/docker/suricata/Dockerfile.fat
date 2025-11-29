@@ -14,7 +14,8 @@ suricata \
 gettext-base \  #For using envsubst so that environment variables can be referenced in config files.
 
 #"Fat" Options for troubleshooting, may be removed later
-emacs
+emacs \
+iproute2
 
 #End Software Install
 
@@ -22,3 +23,16 @@ emacs
 
 #Service Specific
 COPY ./suricata.yaml /etc/suricata/suricata.yaml
+COPY ./.env /etc/suricata/.env
+
+#Run export environment variables
+. ./.env
+
+#Replace suricata.yaml variables with environment variables
+sed 's/export /$/'  -e  's/=[^=]*//'
+
+envsubst "$(sed -e s/export /$/ -e s/=[^=]*// .env)" < suricata.yaml > suricata.yaml.tmp #Generate temp file
+
+mv suricata.yaml.tmp suricata.yaml # Replace the old .yaml file with the new one
+
+
