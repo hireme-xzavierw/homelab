@@ -24,19 +24,19 @@ vars:
     EXTERNAL_NET: "[!$SPAWN,!$SISTER,!$VPN]"
     #EXTERNAL_NET: "any"
 
-    HTTP_SERVERS: "$HOME_NET"
-    SMTP_SERVERS: "$HOME_NET"
-    SQL_SERVERS: "$HOME_NET"
-    DNS_SERVERS: "$HOME_NET"
-    TELNET_SERVERS: "$HOME_NET"
+    HTTP_SERVERS: "$SPAWN"
+    SMTP_SERVERS: "$SPAWN"
+    SQL_SERVERS: "$SPAWN"
+    DNS_SERVERS: "$SPAWN"
+    TELNET_SERVERS: "$SPAWN"
     AIM_SERVERS: "$EXTERNAL_NET"
-    DC_SERVERS: "$HOME_NET"
-    DNP3_SERVER: "$HOME_NET"
-    DNP3_CLIENT: "$HOME_NET"
-    MODBUS_CLIENT: "$HOME_NET"
-    MODBUS_SERVER: "$HOME_NET"
-    ENIP_CLIENT: "$HOME_NET"
-    ENIP_SERVER: "$HOME_NET"
+    DC_SERVERS: "$SPAWN"
+    DNP3_SERVER: "$SPAWN"
+    DNP3_CLIENT: "$SPAWN"
+    MODBUS_CLIENT: "$SPAWN"
+    MODBUS_SERVER: "$SPAWN"
+    ENIP_CLIENT: "$SPAWN"
+    ENIP_SERVER: "$SPAWN"
 
   port-groups:
     HTTP_PORTS: "80"
@@ -619,7 +619,7 @@ logging:
 
 # Linux high speed capture support
 af-packet:
-  - interface: eth0
+  - interface: enp0s31f6
     # Number of receive threads. "auto" uses the number of cores
     #threads: auto
     # Default clusterid. AF_PACKET will load balance packets based on flow.
