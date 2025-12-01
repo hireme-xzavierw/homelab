@@ -9,7 +9,7 @@ RUN apt update && \
 #
 apt install -y \
 suricata \      
-gettext-base   
+gettext-base 
 # Removed for slim build emacs          
 # Removed for slim build iproute2
 
@@ -22,7 +22,7 @@ gettext-base
 #
 COPY ./suricata.yaml /etc/suricata/suricata.yaml
 COPY ./.env /etc/suricata/.env
-
+COPY ./custom.rules /etc/suricata/rules/custom.rules
 #
 # Create environment variables from .env
 # Replace Suricata.yaml variables with environment variables
@@ -32,8 +32,11 @@ COPY ./.env /etc/suricata/.env
 
 RUN . /etc/suricata/.env && \
 envsubst "$(sed -e 's/export /$/' -e 's/=[^=]*//' /etc/suricata/.env)" < /etc/suricata/suricata.yaml > /etc/suricata/suricata.yaml.tmp  && \
-mv /etc/suricata/suricata.yaml.tmp /etc/suricata/suricata.yaml 
+mv /etc/suricata/suricata.yaml.tmp /etc/suricata/suricata.yaml && \ 
+envsubst '${VPORT}' < /etc/suricata/rules/custom.rules > /etc/suricata/rules/custom.rules.tmp && \
+mv /etc/suricata/rules/custom.rules.tmp /etc/suricata/rules/custom.rules 
 RUN chmod +x /etc/suricata/suricata.yaml
+  
 #
 # Update suricata signatures
 #

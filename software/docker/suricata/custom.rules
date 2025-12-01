@@ -1,0 +1,11 @@
+# Log when an outside source hits the vpn port on admin networks
+alert ip [!SPAWN,!SISTER,!VPN] any -> $SPAWN $VPORT
+(msg:"Inbound traffic from unfamiliar source:$SRC_IP on vpn port";
+ classtype:bad-unknown;
+ rev:1;)
+
+# Log when an internal source hits the vpn port on admin networks
+alert ip [SPAWN,SISTER,VPN] any -> $SPAWN $VPORT
+(msg:"Inbound traffic from familiar source:$SRC_IP on vpn port";
+ classtype:bad-unknown;
+ rev:1;)

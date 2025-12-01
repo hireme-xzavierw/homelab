@@ -22,7 +22,7 @@ iproute2
 #
 COPY ./suricata.yaml /etc/suricata/suricata.yaml
 COPY ./.env /etc/suricata/.env
-
+COPY ./custom.rulse /etc/suricata/rules/custom.rules
 #
 # Create environment variables from .env
 # Replace Suricata.yaml variables with environment variables
