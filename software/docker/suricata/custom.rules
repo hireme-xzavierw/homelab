@@ -1,11 +1,9 @@
 # Log when an outside source hits the vpn port on admin networks
-alert ip [!SPAWN,!SISTER,!VPN] any -> $SPAWN $VPORT
-(msg:"Inbound traffic from unfamiliar source:$SRC_IP on vpn port";
- classtype:bad-unknown;
- rev:1;)
+alert ip [!$SPAWN,!$SISTER,!$VPN] any -> $SPAWN $VPORT (msg:"Inbound traffic from unfamiliar source on vpn port";classtype:bad-unknown;flow:not_established;sid: 50000001;rev:1;)
 
 # Log when an internal source hits the vpn port on admin networks
-alert ip [SPAWN,SISTER,VPN] any -> $SPAWN $VPORT
-(msg:"Inbound traffic from familiar source:$SRC_IP on vpn port";
- classtype:bad-unknown;
- rev:1;)
+alert ip [$SPAWN,$SISTER,$VPN] any -> $SPAWN $VPORT (msg:"Inbound traffic from familiar source on vpn port";classtype:bad-unknown;flow:not_established;sid: 50000002;rev:1;)
+
+# Test if my custom rule is being loaded at all
+# alert icmp any any -> $SPAWN any (msg:"Test triggered";classtype:bad-unknown;sid: 50000003;rev:1;)
+
