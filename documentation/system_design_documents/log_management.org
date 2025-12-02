@@ -1,0 +1,36 @@
+* Overview
+
+The design of the homelab requires port-forwarding and the home network will suffer
+an increased risk of intrusion as a result. Although steps to mitigate this risk (the specifics of
+which are beyond the scope of this document) have been taken, the likelihood of suffering
+an intrusion will never be zero. With this in mind I am designing a log management system for the purpose
+of tracking events and alerting myself when they do happen.
+
+* Requirements
+
+To achieve these goals the system needs the following capabilities
+
+** System Requirements [0%]
+ - [ ] Consolidate logs from multiple machines on the network
+ - [ ] Visualize logs for quick analysis
+ - [ ] Set thresholds or triggers for certain events
+ - [ ] Notify via email or text when thresholds are reached
+ - [ ] Low cost
+ - [ ] Relatively low maintenance
+
+* Proposed Solution
+
+The proposed solution leans of FOSS software to maintain low cost at the expense of a high upfront
+labor requirement. Hopefully this labor requirement, which will naturally shrink after the initial setup
+, can be further mitigated by automating maintenance tasks.
+
+** Tools
+
+These tools when taken in aggregate should provide what I need to reach the stated requirements
+
+ - [ ] Grafana Alloy
+   - For forwarding logs to Loki
+ - [ ] Grafana Loki
+   - For aggregating logs
+ - [ ] Grafana
+   - For visualization and alerts
