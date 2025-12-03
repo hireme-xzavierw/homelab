@@ -1,0 +1,11 @@
+* Synopsis
+
+Step by step guide to launching openvpn.
+
+* Procedure
+
+1. Enter the command 'sudo openvpn --config /etc/openvpn/server
+   - For whatever reason starting openvpn as a service via systemd fails. I might be able to fix that by changing the way systemd calles openvpn OR
+     configuring systemd to run a script that starts openvpn as a service.
+   - the 'config' option specifies which config file will be used to start openvpn. In my case it is server.conf. The file extension can be safely left off.
+2. You will be prompted by a password, enter the oen that corresponds to the CA certificate.
