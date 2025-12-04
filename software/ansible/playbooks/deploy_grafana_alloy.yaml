@@ -1,0 +1,17 @@
+- name: Install Grafana Alloy
+  hosts: all
+  tasks:
+    - name: Check for gpg
+      ansible.builtin.package:
+        name: gpg
+        state: present
+    - name: Confirm or Create gpg key directory
+      ansible.builtin.file:
+        path: /etc/apt/keyrings/
+        state: directory
+    - name: Download and create grafana gpg key
+      ansible.builtin.shell: "wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null"
+      args:
+        creates: "/etc/apt/keyrings/grafan.gpg"
+        
+        
