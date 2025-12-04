@@ -1,0 +1,29 @@
+- name: Check for gpg
+  ansible.builtin.package:
+    name: gpg
+    state: present
+
+- name: Confirm or Create gpg key directory
+  ansible.builtin.file:
+    path: /etc/apt/keyrings/
+    state: directory
+        
+- name: Download and create grafana gpg key
+  ansible.builtin.shell: "wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null"
+  args:
+    creates: "/etc/apt/keyrings/grafana.gpg"
+        
+- name: Add repo to apt if Ubuntu/Debian
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main"
+    state: present
+    filename: grafana
+
+- name: Upgrade debain
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: 'yes'
+    
+- name: Install grafana alloy
+  ansible.builtin.apt:
+    name: alloy

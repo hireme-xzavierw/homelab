@@ -1,0 +1,4 @@
+#Setup/install tasks
+- include_tasks: setup_grafana-alloy_debian.yaml
+  when: ansible_facts.os_family == 'Debian'
+        
