@@ -1,0 +1,16 @@
+- name: Upgrade arch
+  community.general.pacman:
+    update_cache: true
+    upgrade: 'yes'
+    
+- name: Install grafana-alloy with paru
+  become: no
+  ansible.builtin.shell: 'echo "1" | paru grafana-alloy-bin'
+  register: cmd_result
+
+- name: Report the output of alloy install
+  ansible.builtin.debug:
+    var: cmd_result.stdout
+
+
+    
