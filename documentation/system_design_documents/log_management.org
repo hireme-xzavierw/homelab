@@ -20,7 +20,7 @@ To achieve these goals the system needs the following capabilities
 
 * Proposed Solution
 
-The proposed solution leans of FOSS software to maintain low cost at the expense of a high upfront
+The proposed solution leverages FOSS software to maintain low costs at the expense of a high upfront
 labor requirement. Hopefully this labor requirement, which will naturally shrink after the initial setup
 , can be further mitigated by automating maintenance tasks.
 
@@ -29,8 +29,8 @@ labor requirement. Hopefully this labor requirement, which will naturally shrink
 These tools when taken in aggregate should provide what I need to reach the stated requirements
 
  - [ ] Grafana Alloy
-   - For forwarding logs to Loki
+   - Agent used for forwarding logs to Loki
  - [ ] Grafana Loki
-   - For aggregating logs
+   - For aggregating, processing and forwarding those logs to grafana
  - [ ] Grafana
-   - For visualization and alerts
+   - For visualization and alerting

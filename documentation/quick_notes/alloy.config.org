@@ -1,0 +1,34 @@
+* Getting Suricata logs into Grafana
+
+Grafana can read both fast.log and eve.json, however, it is probably better to pass eve.json to loki since grafana is able to parse json data automatically.
+
+** Passing .json files to loki
+
+The code snippet below specifies which files will be passed to loki for processing.
+
+#+BEGIN_SRC alloy syntax
+local.file_match "local_files" {
+  path_targets = [{"__path__" = "/var/log/*.log","__path_exclude__" = "/var/log/boot.log"},{"__path__" = "/var/log/docker/suricata_logs/*.json"}]
+  sync_period = "5s"
+}
+#+END_SRC
+
+*** Breakdown by line (unfinished)
+
+  1. 
+  2. This line specifies which files will be passed to loki.
+     1. It is defined by path_targets, letting the agent know which filepaths will be targeted
+     2. The data is enclosed within [], a list
+     3. The list elements are enclosed within {}, a series of key value pairs.
+     4. Within these pairs we can specify "__path__" which designates a specific path or file to be targeted
+	1. __path__ can be set to any filepath. I can use an absolute path directly to a specific file, or
+	   I can use a wildcard (*) to catch all files that follow a certain pattern. In this case I use the patterns *.log and *.json
+	   which will match any files with the .log or .json extension in the specified folders.
+     5. Once __path__ is defined we can also define __path_exclude__ which allows me to designate files that will be skipped completely. The files
+	can be designated in the same way as before, with either absolute paths or pattern matching.
+	1. It seems that these extensions need to be defined with in the same key-value pair structure. Tracking /var/log/*.log and excluding /var/log/boot.log
+	   needed to happen within the same { } structure. The definitions can separated by a comma within the { }.
+     6. Additional files or paths can be added in their own { } structure again separated by a commas. Example: {files},{other files}
+  3. 
+  4. 
+	
