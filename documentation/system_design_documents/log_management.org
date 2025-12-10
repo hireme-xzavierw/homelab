@@ -10,12 +10,12 @@ of tracking events and alerting myself when they do happen.
 
 To achieve these goals the system needs the following capabilities
 
-** System Requirements [0%]
+** System Requirements [50%]
  - [ ] Consolidate logs from multiple machines on the network
- - [ ] Visualize logs for quick analysis
- - [ ] Set thresholds or triggers for certain events
+ - [X] Visualize logs for quick analysis
+ - [X] Set thresholds or triggers for certain events
  - [ ] Notify via email or text when thresholds are reached
- - [ ] Low cost
+ - [X] Low cost
  - [ ] Relatively low maintenance
 
 * Proposed Solution
@@ -28,9 +28,9 @@ labor requirement. Hopefully this labor requirement, which will naturally shrink
 
 These tools when taken in aggregate should provide what I need to reach the stated requirements
 
- - [ ] Grafana Alloy
+ - [X] Grafana Alloy
    - Agent used for forwarding logs to Loki
- - [ ] Grafana Loki
+ - [X] Grafana Loki
    - For aggregating, processing and forwarding those logs to grafana
- - [ ] Grafana
+ - [X] Grafana
    - For visualization and alerting

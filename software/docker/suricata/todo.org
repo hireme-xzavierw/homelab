@@ -1,6 +1,6 @@
 
 
-* TODO LIST FOR SURICATA [66%]
+* TODO LIST FOR SURICATA [60%]
 
   - [X] Figure out how to launch the container in host mode
   - [X] Figure out bind volumes
@@ -8,7 +8,8 @@
     - [ ] Add bind volume to compose file
     - [ ] Add host mode to compose file
   - [ ] Figure out how to send email alerts when a suricata rule is triggered
-  - [ ] Set up another container to visualize suricata alerts and stats
+  - [X] Set up another container to visualize suricata alerts and stats
+    - I achieved this with the grafana stack (alloy, loki, and grafana)
   
   
 
