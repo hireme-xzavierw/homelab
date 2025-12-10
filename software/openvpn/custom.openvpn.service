@@ -1,0 +1,12 @@
+[Unit]
+Description= Openvpn server. Launched via Script
+After=network.target  
+
+[Service]
+Type=exec
+ExecStart=/usr/local/sbin/run_openvpn.sh  
+Restart=on-failure  
+RestartSec=5s  
+
+[Install]
+WantedBy=multi-user.target  # Defines when the service should be started (e.g., during normal multi-user operation)

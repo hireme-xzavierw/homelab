@@ -1,0 +1,43 @@
+* Components
+
+ - Software: Openvpn
+ - Script: run_openvpn.sh
+   - Original Path: ~/Public/Hireme/software/openvpn
+   - Sym Linked Path: /usr/local/sbin
+   - Notes
+     1. run_openvpn.sh relies on the openvpn binary being accessible via $PATH
+	1. Currently changed this so that it uses an absolute filepath /usr/sbin/openvpn as part
+	   of troubleshooting Error A
+
+
+* Errors
+
+** Ongoing
+   - Error A:
+     - Command: sudo systemctl enable custom.openvpn.service
+     - Error: Failed to enable unit: Invalid unit name #
+       - Notes
+	 1. running systemctl status custom.openvpn.service shows that the service does exist.
+	    it presents as loaded AND enabled but I'm not sure why.
+	    1. Tried disabling the service before re-enabling it.
+	       1. Disabling succeeded.
+	       2. Re-enable failed. Error was: Failed to enable unit: Unit custom.openvpn.service does not exist
+	       3. Checked /etc/systemd/system and the files are no longer there. Which i should've known as the
+		  output from the disable command said as much.
+	       4. Maybe the command systemctl daemon-reload automatically enables everything it finds in
+		  /etc/systemd/system?
+	       5. Checked systemctl status custom.openvpn.service again before running the reload but after
+		  copying the file back. The service is listed as loaded, linked, but not enabled.
+	       6. Removed the file and ran the status again, now it comes back Unit custom.openvpn.service cannot be found.
+		  This confirms that systemctl commands are reading that directory for their output.
+	    2. Re-Created the linked files. Re ran the daemon-reload. Will assume that this is enough to load the service
+	       for now. Testing with a simple reboot later.
+	 2. I also just thought to myself, maybe the error message is telling me that the '#' character
+	    is invalid?
+	    1. Dead end. Removed the comment, no change.
+
+* To Do List
+
+** TODO [0%]
+
+- [ ] Find some way to notify myself with the output of a systemctl status custom.openvpn.service 
