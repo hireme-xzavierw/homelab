@@ -1,0 +1,11 @@
+* Query Notes
+
+** Suricata eve.json
+
+ - The "alert_ignature" Field contains information on what a triggered event is and why it is important or troubling. If you made a custom rule and you know what the log message is, you can use this field to confirm it.
+ - "alert_Signature_ID" is the ID number for the triggering event. This is also searchable and can be used to identify specific events.
+
+** General Query Tips
+ - Count By (Filename) is not counting the file itself. It is counting the instances of log data that match you overall query within (filename)
+ - The explore feature is the best place to start building a dashboard
+
