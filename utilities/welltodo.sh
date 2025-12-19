@@ -15,11 +15,11 @@
 # A very small bash script for adding org mode TODO objects to files quickly
 # without opening emacs.
 #
-#  This script takes the string that represents the TODO item as the first
-#  input. It must be presented within double quotes like so: "Example todo"
+# This script takes the string that represents the TODO item as the first
+# input. It must be presented within double quotes like so: "Example todo"
 #
-#  The file that the TODO keyword should be added to is taken as the second
-#  input.
+# The file that the TODO keyword should be added to is taken as the second
+# input.
 # 
 #
 ##############################################################################
@@ -33,7 +33,9 @@ todo_line="* TODO: "
 
 # Core Logic
 
-echo ${todo_line} $1 >> $2
+echo $1
+echo $2
+echo "${todo_line} $1" >> $2
 
 
 # Error Checking
