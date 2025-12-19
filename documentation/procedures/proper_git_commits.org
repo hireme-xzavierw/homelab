@@ -23,3 +23,5 @@ Standard procedure for git commit messages.
 * Footnotes
 
 [fn:1] Source: https://medium.com/@iambonitheuri/the-art-of-writing-meaningful-git-commit-messages-a56887a4cb49 
+
+* TODO Make a wrapper for git commit that presents the options listed here
