@@ -31,6 +31,6 @@ These tools when taken in aggregate should provide what I need to reach the stat
  - [X] Grafana Alloy
    - Agent used for forwarding logs to Loki
  - [X] Grafana Loki
-   - For aggregating, processing and forwarding those logs to grafana
+   - For aggregating, processing and forwarding those logs to Grafana
  - [X] Grafana
    - For visualization and alerting

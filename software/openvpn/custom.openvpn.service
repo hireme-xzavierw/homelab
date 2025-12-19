@@ -1,6 +1,6 @@
 [Unit]
 Description= Openvpn server. Launched via Script
-After=network.target  
+After=network.target  # Network has to be up first
 
 [Service]
 Type=exec
