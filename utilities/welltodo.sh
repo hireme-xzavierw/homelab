@@ -29,7 +29,7 @@
 
 # Set the text that triggers todo functionality to a variable in case this
 # script grows and I need to edit the line many times quickly.
-todo_line="* TODO: "
+todo_line="* TODO "
 
 # Core Logic
 
