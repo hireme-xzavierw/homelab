@@ -36,8 +36,6 @@
 	    is invalid?
 	    1. Dead end. Removed the comment, no change.
 
-* To Do List
 
-** TODO [0%]
-
-- [ ] Find some way to notify myself with the output of a systemctl status custom.openvpn.service 
+* TODO Configure custom.openvpn.service so that running "Systemctl Status openvpn" generates useful output.
+* TODO Prepare and copy openvpn's conf files to the git repo 
