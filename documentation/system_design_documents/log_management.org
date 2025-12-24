@@ -1,10 +1,8 @@
 * Overview
 
-The design of the homelab requires port-forwarding and the home network will suffer
-an increased risk of intrusion as a result. Although steps to mitigate this risk (the specifics of
-which are beyond the scope of this document) have been taken, the likelihood of suffering
-an intrusion will never be zero. With this in mind I am designing a log management system for the purpose
-of tracking events and alerting myself when they do happen.
+The design of the homelab requires port-forwarding which will increase the likelihood of intrusion. Although mitigation steps (the specifics of
+which are beyond the scope of this document) have been taken, the level of risk will never be zero. With this in mind, I am designing a log management system for the purpose
+of tracking and reporting security events.
 
 * Requirements
 
