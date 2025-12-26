@@ -7,6 +7,7 @@
 # Setting Variables: NAME=VALUE
 # Reference Variables: ${NAME}
 # Command Substitution: $(command)
+# Functions: function_name () { commands }
 #
 ##############################################################################
 
