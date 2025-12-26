@@ -16,7 +16,9 @@ A simple setup via docker running the following command:
 
 * Notes
 
-Can also clone from git directly.
+ - Can also clone from git directly.
+ - Installation was extremely simple
+ - May consider changing the prort scheme in the future for security reasons.
 
 * Errors
 

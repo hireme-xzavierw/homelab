@@ -61,7 +61,7 @@ while getopts "ha" opt; do
 	    print_help
 	    exit ;;
 	a)
-	    git add -A ;;
+	    sudo git add -A ;;
 	
     esac
 done

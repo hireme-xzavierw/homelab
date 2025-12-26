@@ -1,2 +1,2 @@
 * DONE [#A] Install and Configure Fosflow
-* TODO  [#A] Complete Documentation for Fosflow
+* DONE [#A] Complete Documentation for Fosflow
