@@ -41,10 +41,17 @@ print_types() {
     
     }
 
+
+
 # Core Logic
 
 # Actually print the types and their descriptions with the function declared earlier.
 print_types
 
+# Prompt for and read user commit message
+read -p "Enter commit message: " cmessage
+
+# Run git commit
+sudo git commit -m "$cmessage"
 
 # Error Checking
