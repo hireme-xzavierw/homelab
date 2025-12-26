@@ -41,17 +41,40 @@ print_types() {
     
     }
 
-
+print_help() {
+    echo "Usage: $(basename "$0") [OPTION]"
+    echo ""
+    echo "Robe is a simple helper script/wrapper for git commits that prints admin defined commit mes\
+sage types. It then prompts the user for their commit message. It does not force the user to pick a m\
+essage type."
+    echo " "
+    echo "-h       display this help and text"
+    echo
+    }
 
 # Core Logic
 
-## Actually print the types and their descriptions with the function declared earlier.
-print_types
+## Help Function
+while getopts "h" opt; do
+    case $opt in
+        h)
+	    print_help
+	    exit ;;
+    esac
+done
 
-## Prompt for and read user commit message
-read -p "Enter commit message: " cmessage
+## Main
 
-## Run git commit
-sudo git commit -m "$cmessage"
+
+    
+    ### Actually print the types and their descriptions with the function declared earlier.
+    print_types
+
+    ### Prompt for and read user commit message
+    read -p "Enter commit message: " cmessage
+
+    ### Run git commit
+    sudo git commit -m "$cmessage"
+
 
 # Error Checking
