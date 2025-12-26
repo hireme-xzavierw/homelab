@@ -49,17 +49,20 @@ sage types. It then prompts the user for their commit message. It does not force
 essage type."
     echo " "
     echo "-h       display this help and text"
-    echo
+    echo "-a       Add all changes to staging before running robe." 
     }
 
 # Core Logic
 
 ## Help Function
-while getopts "h" opt; do
+while getopts "ha" opt; do
     case $opt in
         h)
 	    print_help
 	    exit ;;
+	a)
+	    git add -A ;;
+	
     esac
 done
 

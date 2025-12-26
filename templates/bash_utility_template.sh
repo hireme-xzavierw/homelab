@@ -21,7 +21,7 @@ print_help() {
     echo ""
     echo "Description Placeholder"
     echo " "
-    echo "-h, --help       display this help and text"
+    echo "-h        display this help and text"
     echo 
     }
 
