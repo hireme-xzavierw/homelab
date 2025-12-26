@@ -1,2 +1,2 @@
-* TODO  migrate pki to usb
-* TODO  buy a raspberrypi or get cheap used laptop for bastion host
+* TODO  Migrate pki infrastructure to USB
+* TODO  Buy a raspberrypi or get a cheap used laptop for use as a bastion host

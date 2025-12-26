@@ -1,1 +1,1 @@
-* TODO  configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github
+* TODO  Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github

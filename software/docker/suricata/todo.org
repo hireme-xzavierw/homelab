@@ -1,6 +1,6 @@
 
 
-* TODO LIST FOR SURICATA [60%]
+* TODO Complete suricata configuration [60%]
 
   - [X] Figure out how to launch the container in host mode
   - [X] Figure out bind volumes

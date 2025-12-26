@@ -1,1 +1,1 @@
-* TODO  deploy gitlab to host here at home
+* TODO [#A] Deploy Gitlab CE via docker

@@ -38,4 +38,6 @@
 
 
 * TODO Configure custom.openvpn.service so that running "Systemctl Status openvpn" generates useful output.
-* TODO Prepare and copy openvpn's conf files to the git repo 
+* TODO Prepare and copy openvpn's conf files to the git repo [0%]
+** TODO Replace sensitive data with variables in the conf file
+** TODO Automate replacing the variables with actual values at launch
