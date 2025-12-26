@@ -15,35 +15,36 @@
 
 ## Types of commits
 declare -A types=(
-    types["feat"]="Commit which adds a new feature"
-    types["fix"]="Commit which fixes a bug"
-    types["refactor"]="refactored code that neither fixes a bug nor adds a feature, but rewrites
-                       /restructers your code"
-    types["chore"]="changes that do not relate to a fix or feature and don't modify src or test files,                     \"e.g.\", modifying .gitignore, renaming files or directories."
-    types["perf"]="Commits which refactor for the purpose of improving performance"
-    types["ci"]="Commits which are related to continous integration"
-    types["ops"]="Commits whic affect operational components like infrastructure, deployment, backup
-                  recovery etc."
-    types["build"]="Commits which affect the system build tool, ci pipeline, dependencies, project
-                    version etc."
-    types["docs"]="Commits which affect the documentation, such as the README."
-    types["style"]="Commits which do not change the meaning of the code, related to formatting
-                    such as white-space, missing semi-colons, etc."
-    types["revert"]="Commits which revert a previous commit."
-    types["test"]="Commits which add missing tests or correct existing tests"
+    ["feat"]="Adds a new feature"
+    ["fix"]="Fixes a bug"
+    ["refactor"]="Neither fixes a bug nor adds a feature, but rewrites/restructers your code"
+    ["chore"]="Does not relate to a fix or feature and doesn't modify src or test files \"e.g.\", modifying .gitignore, renaming files or directories."
+    ["perf"]="For the purpose of improving performance"
+    ["ci"]="Related to continous integration"
+    ["ops"]="Affects operational components like infrastructure, deployment, backup recovery etc."
+    ["build"]="Affects the system build tool, ci pipeline, dependencies, project version etc."
+    ["docs"]="Affects the documentation, such as the README."
+    ["style"]="Does not change the meaning of the code. Related to formatting.\"e.g.\" white-space, missing semi-colons, etc."
+    ["revert"]="Reverts to a previous commit."
+    ["test"]="Adds missing tests or corrects existing tests"
 )
 
 # Functions
 
 print_types() {
 
-    for type in "${!types[@]}"; do
+    # Iterate through the types dictionary and print all options to stdout.
+    
+    for key in "${!types[@]}"; do
 	echo "$key: ${types[$key]}" 
+    done
     
     }
 
 # Core Logic
 
+# Actually print the types and their descriptions with the function declared earlier.
+print_types
 
 
 # Error Checking
