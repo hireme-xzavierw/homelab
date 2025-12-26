@@ -1,0 +1,2 @@
+* TODO  Write a tui application in go that wraps git commit -m
+* TODO  Ensure it only allows the user to choose prefixes listed in make_commit.org
