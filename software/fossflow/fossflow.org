@@ -1,0 +1,25 @@
+* Components
+
+ - Software: Fossflow
+    - Source: https://github.com/stan-smith/FossFLOW
+    - License: MIT
+    - Model: FOSS
+ - Script: N/A 
+
+* Setup
+
+A simple setup via docker running the following command:
+
+#+BEGIN_SRC BASH
+   docker run -p 80:80 -v $(pwd):/data/diagrams stnsmith/fossflow:latest
+#+END_SRC
+
+* Notes
+
+Can also clone from git directly.
+
+* Errors
+
+** Can't seem to get the "views" feature working.
+
+ - I actually can't find/activate it so there's no "error".
