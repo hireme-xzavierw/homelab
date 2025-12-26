@@ -13,6 +13,8 @@
 
 # Variables
 
+# Functions
+
 # Core Logic
 
 # Error Checking
