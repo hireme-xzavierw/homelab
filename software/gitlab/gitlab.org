@@ -1,1 +1,20 @@
+* Components
+
+ - Software: Gitlab
+   - License: MIT
+ - Script: 
+
+* Setup
+
+* Notes
+
+* Errors
+
+
+
+
+
 * TODO  [#A] Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github
+* TODO  [#A] Determine if Postfix can be installed via docker
+* TODO  [#A] Install Postfix
+* TODO  [#A] If Possible edit the Docker Compose file to install/configure postfix as well as GITLAB
