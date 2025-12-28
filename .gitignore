@@ -1,5 +1,6 @@
 #Ignore environment variables
 .env
 
-#Ignore emacs temporary files
+#Ignore emacs temporary files and lock files
 *~
+#*#
