@@ -61,7 +61,7 @@ while getopts "ha" opt; do
 	    print_help
 	    exit ;;
 	a)
-	    sudo git add -A ;;
+	    git add -A ;;
 	
     esac
 done
@@ -77,7 +77,7 @@ done
     read -p "Enter commit message: " cmessage
 
     ### Run git commit
-    sudo git commit -m "$cmessage"
+    git commit -m "$cmessage"
 
 
 # Error Checking
