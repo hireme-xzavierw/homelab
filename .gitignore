@@ -3,4 +3,4 @@
 
 #Ignore emacs temporary files and lock files
 *~
-#*#
+.#*

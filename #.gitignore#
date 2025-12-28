@@ -1,0 +1,4 @@
+#Ignore environment variables
+.env
+
+#Ignore emacs temporary and lock files
