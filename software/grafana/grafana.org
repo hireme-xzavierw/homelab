@@ -1,1 +1,95 @@
+* Components
+
+ - Software: Grafana
+   - https://grafana.com/docs/
+ - Related Software:
+   - Alloy
+   - Loki
+   - Suricata
+ - Script: 
+
+* Setup
+
+** With Docker
+
+ 1. Download and configure Suricata
+ 2. Download and Configure Alloy 
+ 3. Distribute Alloy to Endpoints
+ 4. Download and configure loki
+ 5. Download and Run grafana in Docker
+    - #+BEGIN_SRC BASH docker run -d -p $GRAFANA_PORT:3000 --name=grafana grafana/grafana-enterprise #+END_SRC
+    - Ref: https://grafana.com/docs/grafana/latest/setup-grafana/installation/docker/
+ 6. Visit $DEBBI_IP:$GRAFANA_PORT to confirm the service is running.
+
+** With Docker Compose
+
+TBD
+ 
+* Notes
+
+** Usage Notes
+
+ - Once the entire stack (suricata, alloy, loki, grafana) has been configured you will be able to create dashboards.
+   - For file based reporting with JSON files:
+     - The file must be aggregated and passed to loki which will pass to grafana. This is done by configuring the
+       alloy agent.
+     - Loki must be configured to push files to grafana.
+     - Once alloy and loki have been configured you can open grafana by visiting $DEBBI_IP:$GRAFANA_PORT
+     - Navigate to the 'Data Sources' menu under 'Connections' on the UI's left hand side panel
+     - If the loki data source has not been added, you will need to do that
+     - If it has been added click 'explore'
+     - Make sure you query builder is in 'builder' mode not 'code'
+       - Unless you have experience in LogQL
+     - Click Select Label
+       - Choose the 'filename' option
+     - Click select value
+       - Choose the actual filename that contains the logs you are building a dashboard for.
+     - Click 'hint: add json parser'
+       - If this is not available:
+	 - Click '+ Operations' -> Format -> Json
+     - Filter out the json you don't want
+       - Examples:
+	 - '+ Add label filter'
+	 - '+ Add Line filter'
+     - Click 'Run Query' to see your results
+     - Navigate to the 'logs' section, it should be a little bit below where you just built the query
+     - Select the 'fields' you want on the left hand side under the 'fields' section
+       - If you choose to turn this into a dashboard, this step will add transforms for the fields you
+	 selected automatically. This can also be done manually
+     - If you want to save the query as a dashboard:
+       - Click 'Add' near the top right of the panel, several buttons left of the blue 'Run query' button.
+       - Click either 'add to dashboard' or 'new dashboard'
+
+*** Suricata eve.json
+
+ - The "alert_signature" Field contains information on what a triggered event is and why it is important or troubling. If you made a custom rule and you know what the log message is, you can use this field to confirm it.
+ - "alert_Signature_ID" is the ID number for the triggering event. This is also searchable and can be used to identify specific events.
+
+*** General Query Tips
+ - Using the automated features that grafana gives you and inspecting the code and feautres it generates
+   is the best way to learn.
+ - Count By (Filename) is not counting the file itself. It is counting the instances of log data that match you overall query within (filename)
+ - The explore feature is the best place to start building a dashboard
+   
+*** Adding transforms manually
+ - Click on the dashboard panel you want to edit
+ - Click 'Transformations'
+ - Click 'Add another transformation' or 'Add a transformation'
+   - Extract Fields
+     - For JSON you probably want to set your Source to '{} labels' and format to auto.
+   - Format Time
+     - Specify which field in the data actually holds the time data you want in the 'Time field'
+     - The 'Format' section specifies how the time will be displayed and currently uses moment JS.
+       - Example: dddd MMMM Do YYYY -> Sunday, February 14th 2010
+       - Ref: https://momentjs.com/docs/#/displaying/
+
+	 
+
+* Errors
+
 * TODO  Make grafana configuration persistent in case docker shuts down
+* TODO  Create guides and procedures for Configuring and Distributing Alloy
+* TODO  Link to guides and procedures that exist in other docs
+* TODO  Add $GRAFANA_PORT to master .env file
+
+
