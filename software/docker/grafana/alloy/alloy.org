@@ -1,0 +1,3 @@
+* Notes
+
+ 1. Alloy runs on the endpoint, don't forget that. There is no alloy "server" it is the log collector that runs on the endpoint.
