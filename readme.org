@@ -4,10 +4,13 @@ This repo documents my homelab in an attempt to achieve two goals.
  - To slowly bring IAC principles to my homelab so that in the event of a catastrophe it can be easily rebuilt.
  - To advertise skills that I have learned pursuing this project that aren't reflected in my job history
 
+ 
 * Roadmap for Employers
 
-The following explains where to go so see a preview of my ability to host/implement specific technologies
+The following roadmap explains where to go so see a preview of my ability to host/implement/utilize specific technologies.
 Please keep in mind that this project grows in real time and doesn't represent the full extent of my capabilites
-as it stands now.
+as it stands now. 
 
-* Docker
+ - For *Docker*, specifically custom dockerfiles, see [[software/suricata/]]
+ - For *Ansible* see [[software/ansible/roles/managed_endpoint/tasks/]] and [[software/ansible/playbooks]]
+ - For *Bash* and *Shell Scripting* see [[utilities]]
