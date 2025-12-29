@@ -84,9 +84,7 @@ TBD
        - Ref: https://momentjs.com/docs/#/displaying/
 
 	 
-
-* Errors
-
+* To Do List:
 * TODO  Make grafana configuration persistent in case docker shuts down
 * TODO  Create guides and procedures for Configuring and Distributing Alloy
 * TODO  Link to guides and procedures that exist in other docs
