@@ -28,6 +28,10 @@ loki.process "filter_logs" {
     drop_counter_reason = "noisy"
   }
 
+  stage.json {
+    expressions = {}
+  }
+
 
   forward_to = [loki.write.grafana_loki.receiver]
 }

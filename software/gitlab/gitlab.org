@@ -18,11 +18,14 @@ Documentation: https://docs.gitlab.com/install/docker/installation/
 6. Note that software data and logs will be mounted in /var
    1. May be useful to know when migrating to kubernetes
 7. Changing SSH port to avoid conflict. Using $GITLAB_PORT environment variable. Storing in .env
-8. Moved all port info to .env
-9. 
+8. Moved all port info to .env 
  
 
 * Notes
+
+ 1. A completed setup drops me into a working gitlab instance with no account setup. Trying to figure out how to authorize and create accounts.
+    1. Needed to log in to the root account as specified in the documentation. 
+
 
 * Errors
 
