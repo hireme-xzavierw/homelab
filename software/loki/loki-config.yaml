@@ -1,8 +1,8 @@
 auth_enabled: false
 
 server:
-  http_listen_port: 3100
-  grpc_listen_port: 9096
+  http_listen_port: $LOKI_HTTP_LISTEN_PORT
+  grpc_listen_port: $GRPC_LISTEN_PORT
   log_level: debug
   grpc_server_max_concurrent_streams: 1000
 
@@ -41,10 +41,10 @@ schema_config:
 pattern_ingester:
   enabled: true
   metric_aggregation:
-    loki_address: localhost:3100
+    loki_address: localhost:$LOKI_HTTP_LISTEN_PORT
 
 ruler:
-  alertmanager_url: http://localhost:9093
+  alertmanager_url: http://localhost:$ALERTMANAGER_URL_PORT
 
 frontend:
   encoding: protobuf
