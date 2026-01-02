@@ -30,9 +30,10 @@ Documentation: https://docs.gitlab.com/install/docker/installation/
 
 
 
-* TODO  [#A] Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github
-* TODO  [#A] Determine if Postfix can be installed via docker
-* TODO  [#A] Install Postfix
-* TODO  [#A] If Possible edit the Docker Compose file to install/configure postfix as well as GITLAB
-* TODO Consider adding $GITLAB_HOME to env file script
-* TODO Create overarching env file script
+* TODO  [#A] Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github :homelab:core:
+* TODO  [#C] Determine if Postfix can be installed via docker :homelab:extra:
+* TODO  [#C] Install Postfix :homelab:extra:
+* TODO  [#A] If Possible edit the Docker Compose file to install/configure postfix as well as GITLAB :homelab:extra:
+* TODO Consider adding $GITLAB_HOME to env file script :homelab:core:
+* TODO Create overarching env file script :homelab:core:
+* TODO Configure SSH Keys for gitlab :homelab:extra:
