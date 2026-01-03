@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * Components
 
  - Software: Grafana
@@ -91,3 +92,6 @@ TBD
 * TODO  Add $GRAFANA_PORT to master .env file
 
 
+=======
+* TODO  Make grafana configuration persistent in case docker shuts down
+>>>>>>> gitlab

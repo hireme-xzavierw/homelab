@@ -1,0 +1,9 @@
+* General
+* DJDEBBI
+
+Updating docker-ce stops the following containers:
+
+ - Suricata
+ - Loki
+ - Grafana
+ - Fossflow

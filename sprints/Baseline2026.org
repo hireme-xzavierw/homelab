@@ -1,0 +1,21 @@
+* Baseline 2026
+
+** Goal
+
+Establish the baseline of the homelab to start off 2026.
+
+** Dates
+
+ - Start: 1/2/2026
+ - Idealized End Date: 1/30/2026
+ - Stretch End Date: 2/30/2026
+ - Actual End Date: ---
+ - Project Lenght: ____Days
+
+* TODO Baseline 2026 tasks [40%]                        :homelab:core:sprint:
+
+ - [X] Configure gitlab
+ - [X] Transition everything to .env model
+ - [ ] Build dev environment with Terraform
+ - [ ] Configure CI/CD pipeline
+ - [ ] Test Pipeline

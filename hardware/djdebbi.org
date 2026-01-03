@@ -31,6 +31,55 @@
 * Software
 
 ** Docker
+
+*** [[/home/Public/HireMe/software/suricata/suricata.org][Suricata]]
+
+- [X] Env files assesment
+  - [X] Needed
+  - [X] Exists
+
+*** [[/home/Public/HireMe/software/alloy/alloy.org][Alloy]]
+
+- [X] Env files assesment
+  - [X] Needed
+  - [X] Exists
+
+*** [[/home/Public/HireMe/software/loki/loki.org][Loki]]
+
+- [X] Env files assesment
+  - [X] Needed
+  - [X] Exists
+*** [[/home/Public/HireMe/software/grafana/grafana.org][Grafana]]
+
+- [X] Env files assesment
+  - [X] !Needed
+  - [X] !Exists
+
+*** [[/home/Public/HireMe/software/fossflow/flossflow.org][Fossflow
+]]
+ - [X] Env files assesment
+   - [X] !Needed
+   - [X] !Exists
+
+*** [[/home/Public/HireMe/software/gitlab/gitlab.org][Gitlab]]
+
+ - [X] Env file assesment
+   - [X] Needed
+   - [X] Exists
+
+   
+
+
 ** OpenVpn
+
+- [X] Env files assesment                         
+  - [X] Needed                                    
+  - [X] Exists                                    
+                  
+
 ** Samba
-** NFS
+
+ - [X] Env files assesment
+   - [X] !Needed
+   - [X] !Exists
+

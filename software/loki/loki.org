@@ -1,0 +1,16 @@
+* Components
+
+ - Software: Grafana Loki 
+ - Script: 
+
+* Setup
+
+ [[https://grafana.com/docs/loki/latest/setup/install/docker/][Official Docs]]
+ 
+  - Using the "Install with Linux" section
+  - Ignoring all commands having to do with promtail.
+
+* Notes
+
+* Errors
+

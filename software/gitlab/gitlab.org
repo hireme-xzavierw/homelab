@@ -21,21 +21,42 @@ Documentation: https://docs.gitlab.com/install/docker/installation/
 8. Moved all port info to .env 
  
 
+
 * Notes
 
+<<<<<<< HEAD
  1. A completed setup drops me into a working gitlab instance with no account setup. Trying to figure out how to authorize and create accounts.
     1. Needed to log in to the root account as specified in the documentation. 
+=======
+- Reusing the github ssh key for gitlabs ssh. Configured via the ui.
+  - Not fully implemented yet.
+
+>>>>>>> gitlab
 
 
 * Errors
 
+Error:
+fatal: unable to access 'https://192.168.0.41/xzavier_dev/homelab.git/':
+server verification failed:
+certificate signer not trusted. (CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none)
+ - Trigger: Attempting to push git repo to gitlab.homelab
+ - Resolution
+   - Temporarily disabling ssl verification until the self signed cert can be added.
+     - Command: git config http.SSLVerify false
+       - Undo with: git config http.SSLVerify true
+     - May need to resolve this issue *before* re-integrating github into the workflow. Leaving the ssl cert unchecked seems like
+       a security violation when going out to the internet.
+       - Alternatively I could script the push to github to toggle SSLVerify on and off as needed.
 
 
 
 
-* TODO  [#A] Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github
-* TODO  [#A] Determine if Postfix can be installed via docker
-* TODO  [#A] Install Postfix
-* TODO  [#A] If Possible edit the Docker Compose file to install/configure postfix as well as GITLAB
-* TODO Consider adding $GITLAB_HOME to env file script
-* TODO Create overarching env file script
+* TODO  [#A] Configure CI/CD pipeline that pushes tested code to gitlab and presentable code to github :homelab:core:
+* TODO  [#C] Determine if Postfix can be installed via docker :homelab:extra:
+* TODO  [#C] Install Postfix :homelab:extra:
+* TODO  [#A] If Possible edit the Docker Compose file to install/configure postfix as well as GITLAB :homelab:extra:
+* TODO Consider adding $GITLAB_HOME to env file script :homelab:core:
+* TODO Create overarching env file script :homelab:core:
+* TODO Configure SSH Keys for gitlab :homelab:extra:
+* TODO Resolve SSL certificate issue :homelab:core:
