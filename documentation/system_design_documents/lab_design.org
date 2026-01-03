@@ -1,2 +1,19 @@
+* Overview
+* Software
+
+ - Openvpn
+ - Samba
+ - Docker
+ - Suricata
+ - Loki
+ - Grafana
+ - Terraform
+ - Ansible
+
+
+
+
+
+* To Do List
 * DONE [#A] Install and Configure Fosflow
 * DONE [#A] Complete Documentation for Fosflow
