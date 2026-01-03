@@ -5,6 +5,31 @@
 
 * Setup
 
+ - [[https://dev.to/ruanbekker/terraform-with-kvm-2d9e][Guide]]
+   - Installing terraform
+     - Installing directly on the server.
+     - Ignoring the guides recommendation to use wget and unzip terraform in favor of the [[https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli][apt get method]]
+       - software-properties-common was removed in debian 13. It could be re-added via "Unstable" repo.
+       - Pivot to https://developer.hashicorp.com/terraform/install instead. Doesn't seem to require software-properties-common
+	 - Line By line analysis of "Linux -> Ubuntu/Debian" code block
+	   1. Uses wget to pull the gpg key and pipes it into the keyring for apt. The "-" redirects output to stdout.
+	   2. Adds the hashicorp repo to the repolist
+	   3. Update the system. If the update is successfull install terraform.
+	 - Pivot successful.
+   - Ansible is already installed
+   - Installing libvert provider
+     - The guide suggets that I need to manually download the libvertprovider for hashi-corp. I'm not convinced though.
+       - Is the libvert provider in an "upstream registry"? How do providers work?
+	 - https://developer.hashicorp.com/terraform/registry/providers
+	   - "Makes it possible for Terraform CLI to automatically install any of the providers it hosts". The registry is a repo terraform uses.
+	   - "To use any provider from the Registry, all you need to do is require it within your terraform configuration."
+	   - Searching the registry
+	     - https://registry.terraform.io/
+	     - https://registry.terraform.io/providers/dmacvicar/libvirt/latest
+	   - The libvert module absolutely IS in the registry and doesn't need to be downloaded.
+	     It might make sense to do so if I wanted to maintain a specific version though.
+       
+
 * Notes
 
 * Errors
