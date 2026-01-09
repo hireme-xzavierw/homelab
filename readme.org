@@ -1,7 +1,7 @@
 * Homelab Docs
 
 This repo documents my homelab in an attempt to achieve two goals.
- - To bring GitOps principles to my homelab to enable rapid redeployment.
+ - To bring GitOps principles to my homelab, enabling rapid redeployment.
  - To advertise the skills not reflected in my job history.
 
  
