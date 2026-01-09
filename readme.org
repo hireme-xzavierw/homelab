@@ -1,8 +1,8 @@
 * Homelab Docs
 
 This repo documents my homelab in an attempt to achieve two goals.
- - To slowly bring IAC principles to my homelab so that in the event of a catastrophe it can be easily rebuilt.
- - To advertise skills that I have learned pursuing this project that aren't reflected in my job history
+ - To bring GitOps principles to my homelab to enable rapid redeployment.
+ - To advertise the skills not reflected in my job history.
 
  
 * Roadmap for Employers
