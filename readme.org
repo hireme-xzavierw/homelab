@@ -1,13 +1,13 @@
 * Homelab Docs
 
-This repo documents my homelab in an attempt to achieve two goals.
+This repo attempts to achieve two goals:
  - To bring GitOps principles to my homelab, enabling rapid redeployment.
- - To advertise the skills not reflected in my job history.
+ - To advertise the skills I posses which are not reflected in my job history.
 
  
 * Roadmap for Employers
 
-The following roadmap explains where to go so see an example of my ability to host/implement/utilize specific technologies.
+The following roadmap explains where to go to see an example of my ability to host,implement, and utilize specific technologies.
 Please keep in mind that this project grows in real time and doesn't represent the full extent of my capabilites. 
 
  - For *Docker*, specifically custom dockerfiles, see [[software/suricata/][Suricata]]
